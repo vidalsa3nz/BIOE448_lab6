@@ -40,5 +40,7 @@ void loop() {
     any_peak_detected = false;
     
   }
-  Serial.println(60000/pulse_period);
+  BPM = 60000/pulse_period;
+  
+  Serial.println(BPM);
 }
