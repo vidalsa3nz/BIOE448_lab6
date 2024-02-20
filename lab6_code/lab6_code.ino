@@ -28,11 +28,11 @@ void loop() {
   }
   if (pulse_signal < lower_threshold){
     any_peak_detected = false;
-  }
-  if (first_peak_detected == false){
-    first_pulse_time = millis();
-  } else {
-    second_pulse_time = millis();
-    pulse_period = second_pulse_time - first_pulse_time;
+    if (first_peak_detected == false){
+      first_pulse_time = millis();
+    } else {
+      second_pulse_time = millis();
+      pulse_period = second_pulse_time - first_pulse_time;
+    }
   }
 }
